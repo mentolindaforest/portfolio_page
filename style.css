@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point:300,400,700&display=swap');
+:root {
+  --lgreen: #49beb7;
+  --dgreen: #085f63;
+  --gray: #272e2d;
+  --light: #f1f1f1;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Sulphur Point;
+}
+
+/* NAVIGATION PANEL */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: var(--lgreen);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-list a {
+  display: block;
+  padding: 17px 20px;
+  transition: background 0.4s ease-out;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 1px #000000;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.nav-list a:hover {
+  background: var(--light);
+}
+
+/* ABOUT SECTION */
+
+.welcome_msg {
+  font-weight: 700;
+  font-size: 60px;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.desc {
+  font-weight: 300;
+  margin-top: 12px;
+  font-size: 21px;
+  text-align: center;
+  color: var(--lgreen);
+  font-style: italic;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(12deg, var(--dgreen) -10%, var(--gray) 155%);
+}
+
+#welcome-section img {
+  width: 20%;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+@media (max-width: 735px) {
+  #welcome-section img {
+  width: 40%;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  }
+} 
+
+/*PROJECTS SECTION*/
+
+.projects-section {
+  text-align: center;
+  padding: 50px 40px;
+  background: var(--gray);
+}
+
+.projects_header {
+  max-width: 600px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+
+.image {
+  margin-bottom: 0;
+  padding: 0;
+  object-fit: cover; 
+  max-width: 100%;
+  align: center;
+  display: block;
+}
+
+.project-title {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 21px;
+  font-weight: 500;
+  padding: 20px;
+  background: var(--lgreen);
+  color: var(--gray);
+  text-align: center;
+  transition: background 0.4s ease-out;
+}
+
+.project-tile:hover .project-title
+{
+  background: var(--light);
+  
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  max-width: auto;
+  margin: 0 0;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+@media (max-width: 735px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 50px;
+  background-color: var(--dgreen);
+  color: white;
+  width: 145px;
+  height: 45px;
+  opacity: 0.9;
+  font-weight: 300;
+  font-size: 18px;
+  border: 0;
+  transition: background 0.4s ease-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn:hover {
+  background-color: var(--lgreen);
+  opacity: 1;  
+}
+
+/*CONTACT SECTION*/
+
+#contact {
+  background: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85vh;
+}
+
+.contact_msg {
+  font-weight: 900;
+  color: var(--gray);
+  font-size: 50px;
+  text-align: center;
+}
+.contact_desc {
+  color: var(--gray);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 10px;
+}
+#links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#profile:hover {
+  transform: translateY(-9px);
+
+}
+#profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-out;
+}
+
+.icon {
+  padding: 20px 20px 7px;
+  height: 70px;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
+  background: var(--dgreen)
+}
+
+.footer {
+  display: flex;
+  padding: 25px;
+  color: white;
+  opacity: 0.9;
+  font-size: 20px;
+  font-weight: 300;
+  text-shadow: 1px 1px 1px #000000;
+}
